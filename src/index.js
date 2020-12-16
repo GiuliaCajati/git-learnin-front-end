@@ -1,17 +1,52 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+//react router dom
+import { Router } from 'react-router'
+import createBrowserHistory from 'history/createBrowserHistory'
+
+//material ui themes
+import { ThemeProvider } from '@material-ui/styles'
+import { createMuiTheme } from '@material-ui/core/styles' 
+
+//redux 
+import { createStore, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux'
+import rootReducer from './reducers'
+
+//provides history to the App 
+export const history = createBrowserHistory()
+
+//redux
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore( rootReducer, composeEnhancers(
+    applyMiddleware(thunk)
+  ));
+
+// theme
+const theme = createMuiTheme({
+  palette:{
+    primary:{
+      main: '#0000FF',
+    },
+    secondary:{
+      main: '#0000FF',
+    },
+    error:'#FF0000'
+  },
+})
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router history={history}> 
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Provider>
+  </Router>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
