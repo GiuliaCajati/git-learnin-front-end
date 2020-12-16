@@ -12,6 +12,7 @@ import LessonIndex from './containers/LessonIndex'
 import LessonShow from './containers/LessonShow'
 import NotFound from './components/NotFound'
 import About from './components/About'
+import Welcome from './components/Welcome'
 
 function App() {
   // check state from redux 
@@ -22,7 +23,8 @@ function App() {
       <NavBar/>
 
       <Switch>
-        <Route exact path="/" component={Login} />
+        
+        <Route exact path="/" component={Welcome} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/dashboard" component={DashBoard} />
