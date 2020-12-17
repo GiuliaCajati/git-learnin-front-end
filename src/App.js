@@ -14,7 +14,7 @@ import NotFound from './components/NotFound'
 import About from './components/About'
 import Welcome from './components/Welcome'
 
-function App() {
+const App = () => {
   // check state from redux 
   const loggedInUser = useSelector( state => state.loggedInUser )
 
@@ -24,16 +24,16 @@ function App() {
 
       <Switch>
         
-        <Route exact path="/" component={Welcome} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/dashboard" component={DashBoard} />
-        <Route exact path="/courses" component={CourseIndex} />
+        <Route exact path="/" render={Welcome} />
+        <Route exact path="/login" render={Login} />
+        <Route exact path="/signup" render={SignUp} />
+        <Route exact path="/dashboard" render={DashBoard} />
+        <Route exact path="/courses" render={CourseIndex} />
         {/* list of lessons for a specific course */}
-        <Route exact path="/courses/:id" component={LessonIndex} />
-        <Route exact path="/lessons/:id" component={LessonShow} />
-        <Route exact path="/about" component={About} />
-        <Route component={NotFound}/>
+        <Route exact path="/courses/:id" render={LessonIndex} />
+        <Route exact path="/lessons/:id" render={LessonShow} />
+        <Route exact path="/about" render={About} />
+        <Route render={NotFound}/>
       </Switch>
 
     </div>

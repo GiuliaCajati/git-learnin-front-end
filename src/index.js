@@ -7,7 +7,7 @@ import { Router } from 'react-router'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 //material ui themes
-import { ThemeProvider } from '@material-ui/styles'
+import { ThemeProvider } from '@material-ui/core/styles'
 import { createMuiTheme } from '@material-ui/core/styles' 
 
 //redux 
@@ -25,24 +25,39 @@ const store = createStore( rootReducer, composeEnhancers(
     applyMiddleware(thunk)
   ));
 
-// theme
+
+// const theme = createMuiTheme({
+//   palette:{
+//     primary:{
+//       main: '#0000FF',
+//     },
+//     secondary:{
+//       main: '#0000FF',
+//     },
+//     error:'#FF0000'
+//   },
+// })
 const theme = createMuiTheme({
-  palette:{
-    primary:{
-      main: '#0000FF',
+
+  palette: {
+    primary: {
+      main: "#c2cad0" //light blue-grey
     },
-    secondary:{
-      main: '#0000FF',
+    secondary: {
+      main: "#546e7a", //dark blue
+      roseGold: "#E3AEB1"
     },
-    error:'#FF0000'
+    error:{main: '#FF0000'}
   },
-})
+  //fontFamily: 'Chilanka' // as an aside, highly recommend importing roboto font for Material UI projects! Looks really nice
+});
 
 
+//<ThemeProvider theme={theme} > 
 ReactDOM.render(
   <Router history={history}> 
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider  theme={theme}> 
         <App />
       </ThemeProvider>
     </Provider>
