@@ -16,7 +16,7 @@ import Welcome from './components/Welcome'
 
 function App() {
   // check state from redux 
-  const loggedInUser = useSelector( state => state.loggedInUser )
+  // const loggedInUser = useSelector( state => state.loggedInUser )
 
   return (
     <div className="App">
