@@ -31,9 +31,8 @@ const Login = (props) => {
 
     return (
 
-        <div style = {{textAlign: 'center'}}>
+        <div style = {{textAlign: 'center'}} data-testid="Login">
             <form 
-                data-testid="Login"
                 onSubmit = {callback} 
                 style = {{
                     width: '100%', // Fix IE 11 issue.
