@@ -9,14 +9,14 @@ const useStyles = makeStyles((theme) => ({
         width: '100%', // Fix IE 11 issue.
         marginTop: "1%"
     }
-    }))
+}))
     
 const Login = (props) => {
     const classes = useStyles()
     const loginURL = "http://localhost:3000/login"
 
     return (
-        <div style = {{textAlign: 'center'}}>
+        <div style = {{textAlign: 'center'}} data-testid="Login">
             <form style = {{
                 width: '100%', // Fix IE 11 issue.
                 marginTop: "5%",
@@ -37,7 +37,9 @@ const Login = (props) => {
 
                 <Button 
                     style = {{ marginTop: ".7%"}}
-                    variant = "contained">
+                    variant = "contained"
+                    data-testid="loginSubmit"
+                >
                         Login
                 </Button>
 
