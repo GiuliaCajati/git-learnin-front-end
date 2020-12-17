@@ -40,10 +40,11 @@ const store = createStore( rootReducer, composeEnhancers(
   });
 
 
+//<ThemeProvider theme={theme} > 
 ReactDOM.render(
   <Router history={history}> 
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider  theme={theme}> 
         <App />
       </ThemeProvider>
     </Provider>
