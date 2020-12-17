@@ -25,24 +25,25 @@ const store = createStore( rootReducer, composeEnhancers(
     applyMiddleware(thunk)
   ));
 
-// theme
-const theme = createMuiTheme({
-  palette:{
-    primary:{
-      main: '#0000FF',
-    },
-    secondary:{
-      main: '#0000FF',
-    },
-    error:'#FF0000'
-  },
-})
+
+// const theme = createMuiTheme({
+//   palette:{
+//     primary:{
+//       main: '#0000FF',
+//     },
+//     secondary:{
+//       main: '#0000FF',
+//     },
+//     error:'#FF0000'
+//   },
+// })
 
 
+//<ThemeProvider theme={theme} > 
 ReactDOM.render(
   <Router history={history}> 
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider > 
         <App />
       </ThemeProvider>
     </Provider>
