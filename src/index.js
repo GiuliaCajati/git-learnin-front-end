@@ -23,7 +23,7 @@ export const history = createBrowserHistory()
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore( rootReducer, composeEnhancers(
     applyMiddleware(thunk)
-  ));
+));
 
 
 // const theme = createMuiTheme({
@@ -55,13 +55,11 @@ const theme = createMuiTheme({
 
 //<ThemeProvider theme={theme} > 
 ReactDOM.render(
-  <Router history={history}> 
     <Provider store={store}>
       <ThemeProvider  theme={theme}> 
         <App />
       </ThemeProvider>
-    </Provider>
-  </Router>,
+    </Provider>,
   document.getElementById('root')
 );
 
