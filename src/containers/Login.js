@@ -3,6 +3,8 @@ import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import login from "../actions/index"
+import { ConsoleWriter } from 'istanbul-lib-report';
 
 const useStyles = makeStyles((theme) => ({
     form: {
@@ -13,19 +15,37 @@ const useStyles = makeStyles((theme) => ({
     
 const Login = (props) => {
     const classes = useStyles()
+
+    const callback = (e) =>{
+        e.preventDefault();
+        const user = {
+            username: e.target.querySelector("#username").value,
+            password: e.target.querySelector("#password").value
+        }
+        console.log(user)
+        login(user)
+    }
+
+
     const loginURL = "http://localhost:3000/login"
 
     return (
-        <div style = {{textAlign: 'center'}} data-testid="Login">
-            <form style = {{
-                width: '100%', // Fix IE 11 issue.
-                marginTop: "5%",
-                textAlign: "center"
-            }}>
+
+        <div style = {{textAlign: 'center'}}>
+            <form 
+                data-testid="Login"
+                onSubmit = {callback} 
+                style = {{
+                    width: '100%', // Fix IE 11 issue.
+                    marginTop: "5%",
+                    textAlign: "center"
+                }}
+            >
                 
                 <TextField style = {{marginRight: "1%"}}
                     id = "username"
                     label = 'username'
+
                 />
                 <TextField style = {{
                         marginRight: "1%",
@@ -34,17 +54,21 @@ const Login = (props) => {
                     label = 'password'
                 />
 
-                <Button 
+                <Button
+                    type = "submit"  
                     style = {{ marginTop: ".7%"}}
                     variant = "contained"
+
                     data-testid= "loginSubmit"
+
                     >
                         Login
                 </Button>
 
 
             </form>
-            <Link href="signup"  variant="body2"><b>
+            {/* Make sure the sign up link is going to /signup */}
+            <Link href="signup"  variant="body2" data-testid = "toSignup" ><b>
                 {"Need to Git-Learnin? Sign Up"}
             </b>        
             </Link>

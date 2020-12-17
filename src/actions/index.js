@@ -4,7 +4,7 @@ const URL = "http://localhost:3000/"
 
 
 //doublecheck backend path = login 
-export const login = (user) => {
+const login = (user) => {
     return (dispatch) => {
         fetch( URL + "login", {
             method: "POST",
@@ -30,3 +30,4 @@ export const login = (user) => {
         })
     }
 }
+export default login;
