@@ -30,7 +30,8 @@ const Login = (props) => {
     const loginURL = "http://localhost:3000/login"
 
     return (
-        <div style = {{textAlign: 'center'}}>
+
+        <div style = {{textAlign: 'center'}} data-testid="Login">
             <form 
                 onSubmit = {callback} 
                 style = {{
@@ -56,6 +57,9 @@ const Login = (props) => {
                     type = "submit"  
                     style = {{ marginTop: ".7%"}}
                     variant = "contained"
+
+                    data-testid= "loginSubmit"
+
                     >
                         Login
                 </Button>

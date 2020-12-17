@@ -2,10 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-//react router dom
-import { Router } from 'react-router'
-import { createBrowserHistory } from 'history'
-
 //material ui themes
 import { ThemeProvider } from '@material-ui/core/styles'
 import { createMuiTheme } from '@material-ui/core/styles' 
@@ -16,8 +12,6 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import rootReducer from './reducers'
 
-//provides history to the App 
-export const history = createBrowserHistory()
 
 //redux
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -41,13 +35,11 @@ const store = createStore( rootReducer, composeEnhancers(
 
 
 ReactDOM.render(
-  <Router history={history}> 
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
-    </Provider>
-  </Router>,
+    </Provider>,
   document.getElementById('root')
 );
 
