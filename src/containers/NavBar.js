@@ -1,0 +1,17 @@
+import React from 'react';
+
+function NavBar(props) {
+    return (
+        <div>
+            
+        </div>
+    );
+}
+
+export default NavBar;
+// Links 
+// Login/Logout 
+// Welcome Page 
+// About 
+// Dashboard --> CourseProgress 
+// CourseIndex 
