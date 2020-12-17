@@ -34,9 +34,7 @@ test('Submit button works', () => {
 })
 
 test('Fetch returns a user', async () => {
-    // expect.assertions(1);
-    // const data = await functions.fetchUser()
-    // expect(data.name).toEqual('Leanne Graham')
+
 })
 
 test('Test for state change', () => {
