@@ -30,8 +30,10 @@ const Login = (props) => {
     const loginURL = "http://localhost:3000/login"
 
     return (
+
         <div style = {{textAlign: 'center'}}>
             <form 
+                data-testid="Login"
                 onSubmit = {callback} 
                 style = {{
                     width: '100%', // Fix IE 11 issue.
@@ -56,6 +58,9 @@ const Login = (props) => {
                     type = "submit"  
                     style = {{ marginTop: ".7%"}}
                     variant = "contained"
+
+                    data-testid= "loginSubmit"
+
                     >
                         Login
                 </Button>
