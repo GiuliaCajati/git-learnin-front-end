@@ -14,7 +14,7 @@ import NotFound from './components/NotFound'
 import About from './components/About'
 import Welcome from './components/Welcome'
 
-function App() {
+const App = () => {
   // check state from redux 
   const loggedInUser = useSelector( state => state.loggedInUser )
 

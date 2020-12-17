@@ -10,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "1%"
     }
     }))
-function Login(props) {
-    // const classes = useStyles()
+    
+const Login = (props) => {
+    const classes = useStyles()
     const loginURL = "http://localhost:3000/login"
 
     return (
