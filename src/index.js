@@ -4,7 +4,7 @@ import App from './App';
 
 //react router dom
 import { Router } from 'react-router'
-import createBrowserHistory from 'history/createBrowserHistory'
+import { createBrowserHistory } from 'history'
 
 //material ui themes
 import { ThemeProvider } from '@material-ui/core/styles'
