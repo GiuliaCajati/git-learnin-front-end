@@ -3,8 +3,9 @@ import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import login from "../actions/index"
+import { login } from "../actions"
 import { ConsoleWriter } from 'istanbul-lib-report';
+import { useSelector, useDispatch } from 'react-redux'
 
 const useStyles = makeStyles((theme) => ({
     form: {
@@ -12,22 +13,22 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "1%"
     }
     }))
+
     
-const Login = (props) => {
-    const classes = useStyles()
-
-    const callback = (e) =>{
-        e.preventDefault();
-        const user = {
-            username: e.target.querySelector("#username").value,
-            password: e.target.querySelector("#password").value
+    
+    const Login = (props) => {
+        const classes = useStyles()
+        
+        const dispatch = useDispatch()
+    
+        const callback = (e) =>{
+            e.preventDefault();
+            const user = {
+                username: e.target.querySelector("#username").value,
+                password: e.target.querySelector("#password").value
+            }
+            dispatch(login(user))
         }
-        console.log(user)
-        login(user)
-    }
-
-
-    const loginURL = "http://localhost:3000/login"
 
     return (
 
