@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -17,9 +17,10 @@ const useStyles = makeStyles((theme) => ({
     
     
     const Login = (props) => {
-        const classes = useStyles()
+        const classes = useStyles();
+        const [value, setvalue] = useState("")
         
-        const dispatch = useDispatch()
+        const dispatch = useDispatch();
     
         const callback = (e) =>{
             e.preventDefault();
@@ -42,12 +43,17 @@ const useStyles = makeStyles((theme) => ({
                 }}
             >
                 
-                <TextField style = {{marginRight: "1%"}}
+                <input 
+                    type="text"
+                    data-testid="usernameField" 
+                    style = {{marginRight: "1%"}}
                     id = "username"
                     label = 'username'
-
+                    onChange={(e) => setvalue(e.target.value)}
                 />
-                <TextField style = {{
+                <input 
+                type="text"
+                data-testid="passwordField" style = {{
                         marginRight: "1%",
                         marginLeft: "1%"}}
                     id = "password"

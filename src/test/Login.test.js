@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom'
 import { render, screen, cleanup } from './test-utils'
 import userEvent from '@testing-library/user-event'
 import Login from '../containers/Login'
+import { useSelector } from "react-redux"
+import { fireEvent } from '@testing-library/react'
+
 
 beforeEach(() => {
    
@@ -34,10 +37,34 @@ test('Submit button works', () => {
     expect(button).toHaveAttribute('type', 'submit')
 })
 
-test('Fetch returns a user', async () => {
+    
+
+test("check to see if fields can be populated", async() => {
+    const button = screen.getByTestId('loginSubmit')
+    const usernameField = screen.getByTestId("usernameField")
+    const passwordField = screen.getByTestId("passwordField")
+
+    // await userEvent.type(usernameField, "nugget@gmail.com")
+    await fireEvent.change(usernameField, { target: { value: "nugget@gmail.com" } })
+    await fireEvent.change(passwordField, { target: { value: "nugget" } })
+    // await userEvent.type(passwordField, "nugget")
+    
+    expect(usernameField).toHaveValue("nugget@gmail.com")
+    expect(passwordField).toHaveValue("nugget")
 
 })
 
-test('Test for state change', () => {
+// test('Fetch returns a user', async () => {
+//     const user = useSelector(state => state.user)
 
-})
+//     expect(user).toBe(null)
+
+//     await userEvent.click(button)
+
+
+// })
+
+// test('Test for state change', () => {
+
+// })
+
