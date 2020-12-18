@@ -5,7 +5,7 @@ function LessonShow(props) {
     return (
         <div>
             <h2>Lesson</h2>
-            Text and Video (must have Lesson ID)
+            Text and Video (uri =/lessons/:id)
             <LabContainer/>
         </div>
     );

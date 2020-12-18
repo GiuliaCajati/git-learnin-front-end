@@ -4,7 +4,8 @@ import LessonTile from '../components/LessonTile'
 function LessonIndex(props) {
     return (
         <div>
-            Lessons Index (must have Courses ID)
+            Lessons Index (url = /courses/:id)
+            select lesson... redirect to LessonShow
             <LessonTile/>
         </div>
     );
