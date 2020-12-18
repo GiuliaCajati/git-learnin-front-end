@@ -23,7 +23,6 @@ export const history = createBrowserHistory()
 function App() {
   // check state from redux 
   // const loggedInUser = useSelector( state => state.loggedInUser )
-
   return (
     <div className="App">
       <Router history={history}> 
@@ -31,6 +30,7 @@ function App() {
 
         <Switch>
           <Route exact path="/" component={Welcome} />
+          <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dashboard" component={DashBoard} />
