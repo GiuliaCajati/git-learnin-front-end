@@ -1,5 +1,7 @@
 
-const user = (state = null, action) => {
+export const initialState = null;
+
+const user = (state = initialState, action) => {
     switch(action.type){
         case "LOGIN": 
             return action.payload

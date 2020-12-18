@@ -1,19 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { render, screen } from './test-utils'
-import {cleanup} from '@testing-library/react'
+import { render, screen, cleanup } from './test-utils'
 import userEvent from '@testing-library/user-event'
 import Login from '../containers/Login'
-import { Provider } from 'react-redux'
-import { configureStore } from '@reduxjs/toolkit'
-
-
-
-
 
 beforeEach(() => {
    
-    render(<Login />, { initialState: { user: null } })
+    render(<Login />)
     
 });
 
@@ -22,8 +15,7 @@ afterEach(() => {
 });
 
 test('Checking that login component renders properly', () => {
-    const div = document.createElement('div')
-    const component = ReactDOM.render(<Login />, div)
+    //before action takes care of this test. 
 })
 
 // test('Checking that login component matches snapshot', () => {
