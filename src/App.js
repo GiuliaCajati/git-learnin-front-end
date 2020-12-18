@@ -1,7 +1,8 @@
 
 import './App.css';
 import {  Switch, Route, Redirect } from 'react-router-dom';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import React, { useEffect } from "react"
 import Login from './containers/Login'
 import SignUp from './containers/SignUp'
 import DashBoard from './containers/DashBoard'

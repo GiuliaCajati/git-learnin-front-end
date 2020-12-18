@@ -58,3 +58,18 @@ export const signUp = (user) => {
         })
     }
 }
+
+//fetch courses 
+export const fetchingCourses = () => {
+    return (dispatch) => {
+        fetch(URL + "courses")
+        .then(res => res.json())
+        .then(courses => {
+            dispatch({
+                    type: "FETCHED_COURSES", 
+                    payload: courses 
+            })
+        })
+    }
+}
+
