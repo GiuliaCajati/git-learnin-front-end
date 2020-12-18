@@ -14,7 +14,8 @@ function SignUp(props) {
         e.preventDefault();
         const user = {
             username: e.target.querySelector("#email").value,
-            password: e.target.querySelector("#password").value
+            password: e.target.querySelector("#password").value,
+            name: e.target.querySelector("#name").value
         }
         dispatch(signUp(user))
     }
