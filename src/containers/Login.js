@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
                 }}
             >
                 
-                <input 
+                <TextField
                     type="text"
                     data-testid="usernameField" 
                     style = {{marginRight: "1%"}}
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
                     label = 'username'
                     onChange={(e) => setvalue(e.target.value)}
                 />
-                <input 
+                <TextField
                 type="text"
                 data-testid="passwordField" style = {{
                         marginRight: "1%",
