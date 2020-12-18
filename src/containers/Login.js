@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         const callback = (e) =>{
             e.preventDefault();
             const user = {
-                email: e.target.querySelector("#username").value,
+                email: e.target.querySelector("#email").value,
                 password: e.target.querySelector("#password").value
             }
             dispatch(login(user))
@@ -44,8 +44,8 @@ const useStyles = makeStyles((theme) => ({
             >
                 
                 <TextField style = {{marginRight: "1%"}}
-                    id = "username"
-                    label = 'username'
+                    id = "email"
+                    label = 'email'
 
                 />
                 <TextField style = {{
