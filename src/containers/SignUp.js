@@ -13,7 +13,7 @@ function SignUp(props) {
     const handleSubmit = (e) =>{
         e.preventDefault();
         const user = {
-            username: e.target.querySelector("#username").value,
+            username: e.target.querySelector("#email").value,
             password: e.target.querySelector("#password").value
         }
         dispatch(signUp(user))
@@ -24,15 +24,21 @@ function SignUp(props) {
             <form 
                 onSubmit = {handleSubmit} 
                 style = {{
-                    width: '100%', // Fix IE 11 issue.
+                    width: '10%',
                     marginTop: "5%",
-                    textAlign: "center"
+                    textAlign: "center",
+                    marginLeft: "45%",
                 }}
             >
-                
                 <TextField style = {{marginRight: "1%"}}
-                    id = "username"
-                    label = 'username'
+                id = "name"
+                label = 'name'
+                />
+
+
+                <TextField style = {{marginRight: "1%"}}
+                    id = "email"
+                    label = 'email'
 
                 />
                 <TextField style = {{
@@ -44,7 +50,7 @@ function SignUp(props) {
 
                 <Button
                     type = "submit"  
-                    style = {{ marginTop: ".7%"}}
+                    style = {{ marginTop: "5%"}}
                     variant = "contained"
                     >
                         Sign up
