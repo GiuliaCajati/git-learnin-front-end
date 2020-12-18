@@ -34,9 +34,9 @@ export const login = (user) => {
 //first draft of signup action
 export const signUp = (user) => {
     return (dispatch) => {
-        fetch( URL + "signup", {
+        fetch( URL + "users", {
             method: "POST",
-            header: {
+            headers: {
                 "Content-Type": "application/json",
                     "Accept": "application/json"
             },
