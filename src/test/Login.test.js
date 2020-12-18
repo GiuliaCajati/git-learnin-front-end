@@ -1,11 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {render, screen, cleanup} from '@testing-library/react'
+import { render, screen } from './test-utils'
+import {cleanup} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Login from '../containers/Login'
+import { Provider } from 'react-redux'
+import { configureStore } from '@reduxjs/toolkit'
+
+
+
+
 
 beforeEach(() => {
-    render(<Login />)
+   
+    render(<Login />, { initialState: { user: null } })
+    
 });
 
 afterEach(() => {
