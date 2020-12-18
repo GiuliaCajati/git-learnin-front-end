@@ -13,9 +13,10 @@ function SignUp(props) {
     const handleSubmit = (e) =>{
         e.preventDefault();
         const user = {
-            username: e.target.querySelector("#email").value,
+            email: e.target.querySelector("#email").value,
             password: e.target.querySelector("#password").value,
-            name: e.target.querySelector("#name").value
+            name: e.target.querySelector("#name").value,
+            password_confirmation: e.target.querySelector("#password").value
         }
         dispatch(signUp(user))
     }
