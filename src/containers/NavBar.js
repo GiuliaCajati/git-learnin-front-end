@@ -42,7 +42,7 @@ export default function NavBar() {
         >
             <Tab label="Welcome Page" href="/welcome"/>
             {/* <Tab label="About" href="/about"/> */}
-            <Tab label="Dashboard" href="/dashboard"/>
+            <Tab label="My Dashboard" href="/dashboard"/>
             <Tab label="Courses" href="/courses"/>
             <Tab label="Login" href="/login"/>
         </Tabs>
