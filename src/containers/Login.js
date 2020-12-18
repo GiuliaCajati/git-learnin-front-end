@@ -13,23 +13,22 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "1%"
     }
     }))
+
     
-const Login = (props) => {
-    const classes = useStyles()
-    const dispatch = useDispatch()
-
-    const callback = (e) =>{
-        e.preventDefault();
-        const user = {
-            username: e.target.querySelector("#username").value,
-            password: e.target.querySelector("#password").value
+    
+    const Login = (props) => {
+        const classes = useStyles()
+        
+        const dispatch = useDispatch()
+    
+        const callback = (e) =>{
+            e.preventDefault();
+            const user = {
+                username: e.target.querySelector("#username").value,
+                password: e.target.querySelector("#password").value
+            }
+            dispatch(login(user))
         }
-        console.log(user)
-        dispatch(login(user))
-    }
-
-
-    const loginURL = "http://localhost:3000/login"
 
     return (
 

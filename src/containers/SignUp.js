@@ -1,21 +1,28 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import { useSelector, useDispatch } from 'react-redux'
+import {signUp} from "../actions"
 
-const callback = (e) =>{
-    e.preventDefault();
-    const user = {
-        username: e.target.querySelector("#username").value,
-        password: e.target.querySelector("#password").value
-    }
-    debugger
-}
 
 function SignUp(props) {
+
+    const dispatch = useDispatch()
+
+    
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+        const user = {
+            username: e.target.querySelector("#username").value,
+            password: e.target.querySelector("#password").value
+        }
+        dispatch(signUp(user))
+    }
+
     return (
         <div>
             <form 
-                onSubmit = {callback} 
+                onSubmit = {handleSubmit} 
                 style = {{
                     width: '100%', // Fix IE 11 issue.
                     marginTop: "5%",
