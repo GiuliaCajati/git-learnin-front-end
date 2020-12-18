@@ -8,13 +8,13 @@ export const login = (user) => {
     return (dispatch) => {
         fetch( URL + "login", {
             method: "POST",
-            header: {
+            headers: {
                 "Content-Type": "application/json",
                     "Accept": "application/json"
             },
             body: JSON.stringify(user)
         })
-        .then(res => res.json)
+        .then(res => res.json())
         .then(loginData => {
             if (loginData.id){
                 dispatch({

@@ -24,10 +24,11 @@ const useStyles = makeStyles((theme) => ({
         const callback = (e) =>{
             e.preventDefault();
             const user = {
-                username: e.target.querySelector("#username").value,
+                email: e.target.querySelector("#username").value,
                 password: e.target.querySelector("#password").value
             }
             dispatch(login(user))
+
         }
 
     return (
