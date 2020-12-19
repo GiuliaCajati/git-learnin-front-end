@@ -39,7 +39,7 @@ test('Submit button works', () => {
 
     
 
-test("check to see if fields can be populated", async() => {
+test("check to see if fields can be populated", async () => {
     const button = screen.getByTestId('loginSubmit')
     const usernameField = screen.getByTestId("usernameField")
     const passwordField = screen.getByTestId("passwordField")

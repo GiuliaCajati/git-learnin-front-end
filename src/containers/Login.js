@@ -44,20 +44,23 @@ const useStyles = makeStyles((theme) => ({
             >
                 
                 <TextField
-                    type="text"
-                    data-testid="usernameField" 
                     style = {{marginRight: "1%"}}
                     id = "username"
                     label = 'username'
                     onChange={(e) => setvalue(e.target.value)}
+                    inputProps={{
+                        'data-testid': "usernameField" 
+                    }}
                 />
                 <TextField
-                type="text"
-                data-testid="passwordField" style = {{
+                    style = {{
                         marginRight: "1%",
                         marginLeft: "1%"}}
                     id = "password"
                     label = 'password'
+                    inputProps={{
+                        'data-testid': "passwordField" 
+                    }}
                 />
 
                 <Button
