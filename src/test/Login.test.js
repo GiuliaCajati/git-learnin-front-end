@@ -40,7 +40,6 @@ test('Submit button works', () => {
     
 
 test("check to see if fields can be populated", async () => {
-    const button = screen.getByTestId('loginSubmit')
     const usernameField = screen.getByTestId("usernameField")
     const passwordField = screen.getByTestId("passwordField")
 
@@ -55,13 +54,14 @@ test("check to see if fields can be populated", async () => {
 })
 
 // test('Fetch returns a user', async () => {
+//     const button = screen.getByTestId('loginSubmit')
 //     const user = useSelector(state => state.user)
 
 //     expect(user).toBe(null)
 
 //     await userEvent.click(button)
 
-
+//     expect(user).not.toBe(null)
 // })
 
 // test('Test for state change', () => {
