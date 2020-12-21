@@ -39,6 +39,7 @@ export default function CenteredTabs() {
         indicatorColor="secondary"
         textColor="secondary"
       >
+        {/* Onlick insted of href fixes the matrial-ui nav-bar underline */}
           <Tab  label="Welcome Page" onClick={() => handleClick("/welcome")} />
           <Tab label="My Dashboard" onClick={() => handleClick("/dashboard")} />
           <Tab  label="Courses" onClick={() => handleClick("/courses")}  />
