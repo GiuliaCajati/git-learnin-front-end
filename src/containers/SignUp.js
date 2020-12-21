@@ -20,7 +20,7 @@ function SignUp(props) {
     }
 
     return (
-        <div>
+        <div data-testid="SignUp">
             <form 
                 onSubmit = {handleSubmit} 
                 style = {{
@@ -33,6 +33,9 @@ function SignUp(props) {
                 <TextField style = {{marginRight: "1%"}}
                     id = "username"
                     label = 'username'
+                    inputProps = {{
+                        'data-testid': "usernameInput"
+                    }}
 
                 />
                 <TextField style = {{
@@ -40,12 +43,16 @@ function SignUp(props) {
                         marginLeft: "1%"}}
                     id = "password"
                     label = 'password'
+                    inputProps = {{
+                        'data-testid': "passwordInput"
+                    }}
                 />
 
                 <Button
                     type = "submit"  
                     style = {{ marginTop: ".7%"}}
                     variant = "contained"
+                    data-testid = "signUpSubmit"
                     >
                         Sign up
                 </Button>
