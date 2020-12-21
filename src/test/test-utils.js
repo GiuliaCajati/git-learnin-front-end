@@ -7,9 +7,9 @@ import reducer from '../reducers' // to access rest of reducers
 
 
 //custom render that includes redux provider
-function render( ui, {initialState, store = createStore(reducer, initialState),...renderOptions} = {}) {
-    
-    function Wrapper({ children }) {
+const render = ( ui, {initialState, store = createStore(reducer, initialState), ...renderOptions} = {}) => {
+
+    const Wrapper = ({ children }) => {
         return <Provider store={store}>{children}</Provider>
     }
     
