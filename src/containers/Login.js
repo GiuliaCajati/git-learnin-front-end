@@ -36,14 +36,15 @@ const useStyles = makeStyles((theme) => ({
         <div 
             style = {{
                 textAlign: 'center',
-                backgroundColor: '#cfe8fc'
+                backgroundColor: '#cfe8fc',
+                height: "100vh"
             }} 
             data-testid="Login">
             <form 
                 onSubmit = {callback} 
                 style = {{
                     width: '100%', // Fix IE 11 issue.
-                    marginTop: "5%",
+                    paddingTop: "5%",
                     textAlign: "center"
                 }}
             >
@@ -74,7 +75,16 @@ const useStyles = makeStyles((theme) => ({
 
             </form>
             {/* Make sure the sign up link is going to /signup */}
-            <Link href="signup"  variant="body2" data-testid = "toSignup" ><b>
+            <Link 
+                href="signup"  
+                variant="body2" 
+                data-testid = "toSignup"
+                style = {{
+                    color: "#FF6464",
+                    marginTop: "2%"
+                }}
+            >
+            <b>
                 {"Need to Git-Learnin? Sign Up"}
             </b>        
             </Link>

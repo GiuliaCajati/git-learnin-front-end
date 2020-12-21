@@ -23,13 +23,14 @@ function SignUp(props) {
 
     return (
         <div style = {{
-            backgroundColor: '#cfe8fc'
+            backgroundColor: '#cfe8fc',
+            height: "100vh"
         }}>
             <form 
                 onSubmit = {handleSubmit} 
                 style = {{
                     width: '10%',
-                    marginTop: "5%",
+                    paddingTop: "5%",
                     textAlign: "center",
                     marginLeft: "45%",
                 }}
