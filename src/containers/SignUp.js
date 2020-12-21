@@ -22,7 +22,9 @@ function SignUp(props) {
     }
 
     return (
-        <div>
+        <div style = {{
+            backgroundColor: '#cfe8fc'
+        }}>
             <form 
                 onSubmit = {handleSubmit} 
                 style = {{

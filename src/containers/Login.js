@@ -33,7 +33,12 @@ const useStyles = makeStyles((theme) => ({
 
     return (
 
-        <div style = {{textAlign: 'center'}} data-testid="Login">
+        <div 
+            style = {{
+                textAlign: 'center',
+                backgroundColor: '#cfe8fc'
+            }} 
+            data-testid="Login">
             <form 
                 onSubmit = {callback} 
                 style = {{
