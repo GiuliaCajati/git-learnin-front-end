@@ -12,13 +12,26 @@ function SignUp(props) {
     
     const handleSubmit = (e) =>{
         e.preventDefault();
-        const user = {
-            email: e.target.querySelector("#email").value,
-            password: e.target.querySelector("#password").value,
-            name: e.target.querySelector("#name").value,
-            password_confirmation: e.target.querySelector("#password").value
+        let password = e.target.querySelector("#password").value
+        let password_confirmation = e.target.querySelector("#confirm-password").value
+
+        if (password === password_confirmation){
+
+            const user = {
+                name: e.target.querySelector("#name").value,
+                email: e.target.querySelector("#email").value,
+                password: e.target.querySelector("#password").value,
+                password_confirmation: e.target.querySelector("#confirm-password").value
+            }
+            dispatch(signUp(user))
+
         }
-        dispatch(signUp(user))
+        else {
+            alert("The passwords do not match")
+            e.target.querySelector("#confirm-password").value = ""
+            e.target.querySelector("#password").value = ""
+        }
+        
     }
 
     return (
@@ -51,6 +64,12 @@ function SignUp(props) {
                         marginLeft: "1%"}}
                     id = "password"
                     label = 'password'
+                />
+                <TextField style = {{
+                        marginRight: "1%",
+                        marginLeft: "1%"}}
+                    id = "confirm-password"
+                    label = 'confirm password'
                 />
 
                 <Button
