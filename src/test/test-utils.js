@@ -2,6 +2,7 @@ import React from 'react'
 import { render as rtlRender } from '@testing-library/react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+
 // Import our reducer
 import reducer from '../reducers' // to access rest of reducers
 
@@ -20,6 +21,9 @@ const render = ( ui, {initialState, store = createStore(reducer, initialState), 
 export * from '@testing-library/react'
 // override render method
 export { render }
+
+
+
 
 
 
