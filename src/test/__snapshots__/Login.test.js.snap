@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checking that login component matches snapshot 1`] = `
+<div>
+  <div
+    data-testid="Login"
+    style="text-align: center;"
+  >
+    <form
+      style="width: 100%; margin-top: 5%; text-align: center;"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+        style="margin-right: 1%;"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+          for="username"
+          id="username-label"
+        >
+          username
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            data-testid="usernameField"
+            id="username"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root MuiTextField-root"
+        style="margin-right: 1%; margin-left: 1%;"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+          data-shrink="false"
+          for="password"
+          id="password-label"
+        >
+          password
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            data-testid="passwordField"
+            id="password"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained"
+        data-testid="loginSubmit"
+        style="margin-top: .7%;"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Login
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </form>
+    <a
+      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-body2 MuiTypography-colorPrimary"
+      data-testid="toSignup"
+      href="signup"
+    >
+      <b>
+        Need to Git-Learnin? Sign Up
+      </b>
+    </a>
+  </div>
+</div>
+`;
